@@ -3,6 +3,7 @@ version: '3.8'
 services:
   plex:
     image: plexinc/pms-docker
+    restart: unless-stopped
     ports:
       - 32400:32400
       - 1900:1900/udp
@@ -14,7 +15,23 @@ services:
       - 32413:32413/udp
       - 32414:32414/udp
       - 32469:32469
+    volumes:
+      # - /path/to/tvseries:/tv
+      - ./movies:/movies
     environment:
       - PUID=1000
       - PGID=1000
       - VERSION=docker
+  samba:
+    image: dperson/samba
+    environment:
+      TZ: 'Europe/Prague'
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      # - "445:445/tcp"
+    restart: unless-stopped
+    volumes:
+      - ./movies:/mnt:z
+    command: '-s "Movies;/mnt"-p'
