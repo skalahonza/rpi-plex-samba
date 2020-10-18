@@ -35,4 +35,4 @@ services:
       - "445:445/tcp"
     volumes:
       - ./plex:/mnt:z
-    command: '-s "Plex;/mnt" -p'
+    command: '-s "Plex;/mnt;yes;no" -p'
