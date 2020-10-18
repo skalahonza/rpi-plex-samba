@@ -15,8 +15,8 @@ services:
       - 32414:32414/udp
       - 32469:32469
     volumes:
-      - .plex/tv:/tv
-      - .plex/movies:/movies
+      - ./plex/tv:/tv
+      - ./plex/movies:/movies
     environment:
       - PUID=1000
       - PGID=1000
