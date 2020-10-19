@@ -45,6 +45,8 @@ proc            /proc           proc    defaults          0       0
 * In **/mnt** folder run `docker-compose up -d`
 * Go to https://app.plex.tv/desktop
 * Setup your Plex server
+* Put all your movies into **plex/movies** folder
+* Put all your tv series in **plex/tv folder**
 
 # Notes
 ## Plex source image
