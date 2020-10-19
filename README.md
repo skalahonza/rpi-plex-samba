@@ -41,9 +41,10 @@ proc            /proc           proc    defaults          0       0
 ## 3. Launch
 * Go to https://plex.tv/claim
 * Copy your code
-* In **/mnt** folder run `docker-compose -e TOKEN=yourtoken up -d`
+* Set your code as variable `export TOKEN="yourtoken"`
+* In **/mnt** folder run `docker-compose up -d`
 * Go to https://app.plex.tv/desktop
-* Setup your Plex s
+* Setup your Plex server
 
 # Notes
 ## Plex source image
