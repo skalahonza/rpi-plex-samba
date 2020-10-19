@@ -45,7 +45,8 @@ proc            /proc           proc    defaults          0       0
 * Go to https://app.plex.tv/desktop
 * Setup your Plex s
 
-## Plex config
+# Notes
+## Plex source image
 * https://hub.docker.com/r/linuxserver/plex
 ```yml
     volumes:
@@ -53,7 +54,7 @@ proc            /proc           proc    defaults          0       0
       - /path/to/tvseries:/tv
       - /path/to/movies:/movies
 ```
-## Samba config
+## Samba source image
 * https://hub.docker.com/r/dperson/samba
 * https://github.com/dperson/samba
 * https://github.com/dperson/samba/blob/master/docker-compose.yml
