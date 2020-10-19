@@ -3,6 +3,18 @@ Raspberry Pi with Plex server and Samba local network disc sharing.
 
 # Installation
 ## 1. Setup
+* (Optional) install NTFS compatibility tool `sudo apt-get install ntfs-3g -y`
+* Install Docker and Docker Compose
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker ${USER}
+sudo su - ${USER}
+sudo apt-get install libffi-dev libssl-dev
+sudo apt install python3-dev
+sudo apt-get install -y python3 python3-pip
+sudo pip3 install docker-compose
+```
 * Download this repo
 * Copy on the root folder of your hard drive
 * Plug into your RPI
@@ -29,7 +41,7 @@ proc            /proc           proc    defaults          0       0
 ## 3. Launch
 * Go to https://plex.tv/claim
 * Copy your code
-* In **/mnt** folder run `docker-compose up -e TOKEN=yourtoken -d`
+* In **/mnt** folder run `docker-compose -e TOKEN=yourtoken up -d`
 * Go to https://app.plex.tv/desktop
 * Setup your Plex s
 
