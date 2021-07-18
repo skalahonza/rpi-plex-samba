@@ -35,7 +35,7 @@ then it should look like this
 proc            /proc           proc    defaults          0       0
 /dev/mmcblk0p6  /boot           vfat    defaults          0       2
 /dev/mmcblk0p7  /               ext4    defaults,noatime  0       1
-/dev/sda1       /mnt            ntfs    defaults          0       0
+/dev/sda1       /mnt            ntfs    nofail          0       0
 ```
 
 ## 3. Launch
